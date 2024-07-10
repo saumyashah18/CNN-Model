@@ -1,1 +1,1 @@
-Covulational Neuaral Network
+Convolutional Neural Network
