@@ -227,5 +227,26 @@ Matrix max_pool(const Matrix &input, int pool_size, int stride) {
     return pooled;
 }
 
+//Pool Flatten Functionnn
+Matrix pool_flatten (const Matrix &input){
+    int size = input.getRows() * input.getColumns();
+    vector<double> flattened(size);
+    for (int i = 0; i < input.getRows(); ++i) {
+            for (int j = 0; j < input.getColumns(); ++j) {
+                (flattened)[i * input.getColumns() + j] = input.get(i, j);
+            }
+        }
+        return flattened;
+
+
+    }
+
+
+
+
 
 }
+
+
+
+
